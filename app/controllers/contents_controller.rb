@@ -3,7 +3,7 @@ class ContentsController < ApplicationController
 
   # GET /contents
   def index
-    @contents = Content.all
+    @contents = Content.published_contents
 
     render json: @contents
   end
@@ -46,6 +46,6 @@ class ContentsController < ApplicationController
 
   # Only allow a trusted parameter "white list" through.
   def content_params
-    params.require(:content).permit(:title, :author, :summary, :content, :published_date)
+    params.require(:content).permit(:title, :author, :summary, :content, :published_date, :status)
   end
 end

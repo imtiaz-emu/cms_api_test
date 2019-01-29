@@ -13,7 +13,8 @@ RSpec.describe ContentsController, :type => :controller do
         summary: Faker::LordOfTheRings.quote,
         published_date: Time.now,
         content: Faker::Lorem.paragraph(10),
-        author: Faker::Name.name
+        author: Faker::Name.name,
+        status: 'published'
     }
   }
 

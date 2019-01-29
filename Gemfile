@@ -43,3 +43,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'simplecov', require: false, group: :test
 gem 'active_model_serializers', '~> 0.10.2'
 gem 'faker', '~> 1.6', '>= 1.6.6'
+gem 'sidekiq', '~> 4.1', '>= 4.1.2'
