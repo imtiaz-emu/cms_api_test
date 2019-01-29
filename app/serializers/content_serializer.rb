@@ -1,3 +1,3 @@
 class ContentSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :title, :author, :published_date, :content, :summary
 end
