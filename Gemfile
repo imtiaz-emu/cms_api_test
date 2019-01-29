@@ -27,6 +27,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails', '~> 3.4', '>= 3.4.2'
+  gem 'rails-controller-testing'
 end
 
 group :development do
@@ -41,3 +42,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'simplecov', require: false, group: :test
 gem 'active_model_serializers', '~> 0.10.2'
+gem 'faker', '~> 1.6', '>= 1.6.6'
