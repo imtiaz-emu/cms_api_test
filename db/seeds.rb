@@ -11,7 +11,7 @@ require 'faker'
   Content.create(
       title: Faker::Lorem.sentence,
       summary: Faker::LordOfTheRings.quote,
-      published_date: i.even? ? Time.now : Time.now + 10.minutes,
+      published_date: i.even? ? Time.now : (Time.now + 10.minutes),
       content: Faker::Lorem.paragraph(10),
       author: Faker::Name.name
   )

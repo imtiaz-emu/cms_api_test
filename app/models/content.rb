@@ -11,7 +11,7 @@ class Content < ApplicationRecord
 
   def publish_future_content
     if self.status != 'published' && self.published_date > Time.now
-      ContentWorker.perform_at(self.published_date, self)
+      ContentWorker.perform_at(self.published_date, self.id)
     end
   end
 
