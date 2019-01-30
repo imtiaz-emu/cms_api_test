@@ -8,8 +8,12 @@
 
   <div class="album py-5 bg-light">
     <div class="container">
-      <!--{{contents}}-->
-      <div class="row">
+      <div class="row" *ngIf="isEmptyObject(contents)">
+        <div class="col-lg-12 text-center">
+          <h5>No published contents to show</h5>
+        </div>
+      </div>
+      <div class="row" *ngIf="!isEmptyObject(contents)">
         <div class="col-md-4" *ngFor="let content of contents">
           <div class="card mb-4 shadow-sm">
             <div class="card-body">

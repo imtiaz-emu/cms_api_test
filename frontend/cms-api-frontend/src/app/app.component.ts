@@ -15,4 +15,8 @@ export class AppComponent implements OnInit {
    this.http.get('http://localhost:3000/api/contents.json')
      .subscribe(res => this.contents = res);
  }
+
+  isEmptyObject(obj) {
+    return (obj && (Object.keys(obj).length === 0));
+  }
 }
